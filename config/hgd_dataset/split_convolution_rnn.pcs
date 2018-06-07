@@ -1,0 +1,23 @@
+# Model
+rnn_normalization categorical {none, batch_norm, layer_norm} [none]
+skip_mode categorical {add, none} [none]
+rnn_hidden_size integer [4, 128] [32] log
+rnn_num_layers integer [1, 3] [1] log
+dropout_f real [0.0, 0.5] [0.0]
+dropout_h real [0.0, 0.5] [0.0]
+dropout_i real [0.0, 0.2] [0.0]
+
+
+lr real [0.0001, 0.01] [0.001] log
+batch_size integer [8, 128] [64] log
+l2_decay real [0.000000001, 0.001] [0.0001] log
+weight_decay real [0.000000001, 0.001] [0.0001] log
+
+lasso_selection real [0.000000001, 1.0] [0.0001] log
+
+features_per_channel integer [5, 75] [25] log
+time_kernel_size integer [5, 125] [40] log
+merged_channels integer [5, 125] [40] log
+pooling_size integer [1, 125] [75] log
+pooling_stride integer [1, 50] [15] log
+cnn_batch_norm categorical {1, 0} [1]

@@ -1,0 +1,17 @@
+# Model
+rnn_normalization categorical {none, batch_norm, layer_norm} [none]
+skip_mode categorical {add, concat, none} [none]
+rnn_dilation categorical {1, 2} [1]
+rnn_hidden_size integer [8, 256] [32] log
+rnn_num_layers integer [1, 8] [4] log
+dropout_f real [0.0, 0.5] [0.0]
+dropout_h real [0.0, 0.5] [0.0]
+dropout_i real [0.0, 0.2] [0.0]
+rnn_cell_type categorical {LSTM, GRU, IndGRU} [GRU]
+
+# Training
+lr real [0.0001, 0.01] [0.001] log
+batch_size integer [10, 1000] [100] log
+l2_decay real [0.000000001, 0.0001] [0.00001] log
+weight_decay real [0.000000001, 0.0001] [0.00001] log
+cosine_decay categorical {0, 1} [1]

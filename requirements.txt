@@ -1,0 +1,9 @@
+colorlog=3.1.0
+click
+tensorflow
+mne
+ConfigSpace
+hpbandster=0.5.3
+torch
+numpy
+braindecode=0.3.1

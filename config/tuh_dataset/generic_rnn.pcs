@@ -1,0 +1,21 @@
+# Model
+rnn_normalization categorical {none, batch_norm, layer_norm} [none]
+skip_mode categorical {add, concat, none} [none]
+use_context categorical {0, 1} [0]
+rnn_dilation categorical {1, 2} [1]
+rnn_hidden_size integer [8, 256] [32] log
+rnn_num_layers integer [1, 8] [4] log
+dropout_f real [0.0, 0.5] [0.0]
+dropout_h real [0.0, 0.5] [0.0]
+dropout_i real [0.0, 0.2] [0.0]
+rnn_cell_type categorical {LSTM, GRU, IndGRU} [GRU]
+
+# Training
+data_path categorical {/home/chrabasp/data/anomaly_14min_100hz_unclipped, /home/chrabasp/data/anomaly_14min_100hz} [/home/chrabasp/data/anomaly_14min_100hz]
+lr real [0.0001, 0.01] [0.001] log
+batch_size integer [8, 128] [64] log
+sequence_size ordinal {128, 256, 512, 1024, 2048, 4096} [512]
+l2_decay real [0.000000001, 0.0001] [0.00001] log
+weight_decay real [0.000000001, 0.0001] [0.00001] log
+cosine_decay categorical {0, 1} [1]
+use_augmentation categorical {0, 1} [0]

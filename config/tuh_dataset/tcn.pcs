@@ -1,0 +1,12 @@
+# Model
+dropout real [0.0, 0.5] [0.0]
+kernel_size integer [2, 16] [8] log
+num_channels integer [32, 512] [64] log
+num_levels integer [1, 5] [3]
+
+# Training
+lr real [0.0001, 0.01] [0.001] log
+batch_size integer [16, 128] [64] log
+l2_decay real [0.000000001, 0.0001] [0.00001] log
+weight_decay real [0.000000001, 0.0001] [0.00001] log
+use_augmentation categorical {0, 1} [0]

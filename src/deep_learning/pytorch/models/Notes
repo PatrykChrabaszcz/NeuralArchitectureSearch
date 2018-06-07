@@ -1,0 +1,7 @@
+In Pytorch:
+
+1D CNNs require the data to be formatted:
+BatchSize x Features x Time
+
+RNNs require the data to be formatted (when using batch_first=True):
+BatchSize x Features x Time
